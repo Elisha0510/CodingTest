@@ -4,5 +4,5 @@
 
 ## 성능
 
-- Time: 0.13ms
-- Memory: 10.3MB
+- Time: 0.12ms
+- Memory: 10.4MB
