@@ -15,7 +15,6 @@ def solution(people, limit):
                 cnt+=1
                 dq.popleft() 
         elif(len(dq) == 1):
-            dq.pop()
             cnt += 1
             break
         elif(len(dq) == 0):
