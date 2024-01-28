@@ -1,7 +1,6 @@
 def solution(n):
     cnt = 0 
-    answer = find_minimum(n, cnt)
-    return answer
+    return find_minimum(n, cnt)
     
 def find_minimum(n, cnt):
     if(n%2 == 0):
