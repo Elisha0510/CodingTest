@@ -1,6 +1,4 @@
-def solution(arr):
-    arr.sort()
-    
+def solution(arr):    
     mul, answer = 1,1
     for i in arr:
         mul *= i
@@ -8,7 +6,7 @@ def solution(arr):
     result = arr[0]
     for i in range(1, len(arr)):
         g = max_number(result, arr[i])
-        result = (result / g) * arr[i]
+        result = result * arr[i] / g
     
     return result
 
