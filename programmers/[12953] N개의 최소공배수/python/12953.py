@@ -1,9 +1,9 @@
+import math
 def solution(arr):    
     
     result = arr[0]
     for i in range(1, len(arr)):
-        g = max_number(result, arr[i])
-        result = result * arr[i] / g
+        result = result * arr[i] // math.gcd(result, arr[i])
     
     return result
 
