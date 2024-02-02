@@ -5,9 +5,7 @@ def solution(elements):
     # 길이 1
     result = list(set(elements))
     # 길이 최대
-    for x in range(num):
-        sum_cnt += elements[x]
-    result.append(sum_cnt)
+    result.append(sum(elements))
     
     arr = elements + elements
         
