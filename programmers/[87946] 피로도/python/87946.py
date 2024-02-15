@@ -1,7 +1,6 @@
 from itertools import permutations
 
 def solution(k, dungeons):
-    arr = dungeons
     cntArr = []
     cnt = 0
     caseArr = list(permutations(dungeons))
@@ -15,7 +14,6 @@ def solution(k, dungeons):
         cntArr.append(cnt)
         cnt = 0
     
-    print(cntArr)
     return max(cntArr)
     
         
