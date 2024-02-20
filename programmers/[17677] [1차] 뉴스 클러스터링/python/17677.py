@@ -24,7 +24,4 @@ def solution(str1, str2):
     if (sumLength == 0 and equalLength == 0):
         return 65536
     else:
-        return int(equalLength / sumLength * 65536)
-
-    
-        
+        return int(equalLength / sumLength * 65536)    
