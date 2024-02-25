@@ -10,24 +10,26 @@ def solution(maps):
     visited = [[0] * m for _ in range(n)]
     dis = [[0] * m for _ in range(n)]
     
-    queue = deque()
-    queue.append((0,0))
-    visited[0][0] = 1
-    dis[0][0] = 1
-        
-    while queue:
-        now = queue.popleft()
-            
-        for k in range(4):
-            x = now[0] + dx[k]
-            y = now[1] + dy[k]
-                
-            if 0<=x<=n-1 and 0<=y<=m-1:
-                if maps[x][y] == 1 and visited[x][y] == 0:
-                    visited[x][y] = 1
-                    dis[x][y] = dis[now[0]][now[1]] + 1
-                    queue.append((x, y))
+    def bfs(i, j):
+        queue = deque()
+        queue.append((i,j))
+        visited[i][j] = 1
+        dis[i][j] = 1
+
+        while queue:
+            now = queue.popleft()
+
+            for k in range(4):
+                x = now[0] + dx[k]
+                y = now[1] + dy[k]
+
+                if 0<=x<=n-1 and 0<=y<=m-1:
+                    if maps[x][y] == 1 and visited[x][y] == 0:
+                        visited[x][y] = 1
+                        dis[x][y] = dis[now[0]][now[1]] + 1
+                        queue.append((x, y))
     
+    bfs(0,0)
     result = -1 if dis[n-1][m-1] == 0 else dis[n-1][m-1]
     return result
             
