@@ -1,12 +1,18 @@
 import sys
 
-n = int(sys.stdin.readline().strip())
+n = int(input())
 
 arr = []
 for i in range(n):
     arr.append(int(sys.stdin.readline().strip()))
 
-arr.sort()
+for i in range(n-1):
+    for j in range((n-1)-i):
+        if arr[j] > arr[j+1]:
+            tmp = arr[j]
+            arr[j] = arr[j+1]
+            arr[j+1] = tmp
 
-for i in range(n):
-    print(arr[i])
+for a in arr:
+    print(a)
+    
